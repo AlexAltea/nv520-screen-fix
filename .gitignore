@@ -1,0 +1,15 @@
+# Visual Studio
+temp/
+*.idb
+*.ilk
+*.iobj
+*.ipdb
+*.log
+*.obj
+*.pdb
+*.tlog
+*.vcxproj.user
+.vs
+
+# Binaries
+*-debug.exe
