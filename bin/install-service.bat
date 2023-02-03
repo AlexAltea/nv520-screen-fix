@@ -14,9 +14,9 @@ if %errorLevel% NEQ 0 (
   exit 0
 )
 
-for /f "tokens=2 delims==" %%f in ('wmic os get osarchitecture /value ^| find "="') do set "BITS=%%f"
-if "%BITS%"=="32-bit" goto :config32
-if "%BITS%"=="64-bit" goto :config64
+for /f "tokens=2 delims==" %%f in ('wmic cpu get AddressWidth /value ^| find "="') do set "BITS=%%f"
+if "%BITS%"=="32" goto :config32
+if "%BITS%"=="64" goto :config64
 
 echo Unsupported architecture!
 exit 1
